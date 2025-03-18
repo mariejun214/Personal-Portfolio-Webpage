@@ -1,0 +1,236 @@
+/*start of navbar*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#navbar {
+    display: flex;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    padding: 5px; 
+    background-color: #be3144;
+    justify-content: right;
+    height: 50px;
+
+}
+.logo {
+    display: flex;
+    width: 80%;
+    justify-content: left;
+    margin-right: 20px;  
+}
+
+#logo{
+    width: 40px;
+    height: 40px;
+    margin-top: 0;
+    border-radius: 50%;  
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-weight: bold;
+    margin-right: 2rem;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    padding-top: 8px;
+}
+/*end of navbar*/
+
+/*start of welcome section*/
+.welcome-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 30vh;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #303841;
+    color: #f0f0f0;
+}
+
+#welcome-section {
+    display: block;
+    height: 100vh;
+    text-align: center;      
+}
+
+.welcome-heading {
+    font-size: 3rem;
+}
+
+.welcome-text {
+    font-size: 2rem;
+    color: #be3144;
+}
+/*end of welcome section*/
+
+/*start of My project section*/
+#projects {
+    background-color:darkcyan;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+.my-projects-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 2rem;
+}
+
+.project-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-bottom: 6rem;
+}
+
+.project-image {
+    width: 380px;
+    height: 280px;
+    border-radius: 5px;
+}
+
+.project-tile {
+    text-decoration: none;
+    color: #f0f0f0;
+   
+}
+
+.project-title {
+    padding-top: 10px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.project-title:hover {
+    color:#be3144;
+    background: #f0f0f0;
+    border-radius: 5px;
+    
+}
+
+@media (max-width: 380px) {
+    .nav-list a {
+        font-size: 10px;  
+    }
+   #logo {
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+   }
+}
+
+@media (max-width: 380px) {
+    .welcome-heading {
+        font-size: 1.5rem;
+    }
+    .welcome-text {
+        font-size: 1rem;
+    }
+    .welcome-image {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+@media (max-width: 380px) {
+    .project-image {
+        width: 180px;
+        height: 120px;
+        border-radius: 5px;
+    }
+    .my-projects-heading {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .project-title {
+        font-size: 10px;
+        font-weight: bold;
+    }   
+}
+/*end of My my project section*/
+
+/*start of contact section*/
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;   
+}
+
+.contact-section-header {
+    display: block;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+#profile-section {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100px;
+    align-items: center;
+    gap: 35px;
+    margin-top: 3rem;
+}
+
+.profile-link  {
+    text-decoration: none;
+    color: #f0f0f0; 
+    font-size: 1.5rem;
+    
+}
+.profile-link:hover {
+    color: #be3144;
+    background: #f0f0f0;
+    padding: 5px;   
+}
+
+@media (max-width: 420px) {
+    .contact-section {
+        height: 100vh;
+        justify-content: center;
+    }
+    .contact-section-header {
+        font-size: 1rem;
+    }
+    .profile-link {
+        font-size: 0.75rem;
+    }
+}
+/*end of contact section*/
+
+/*start of footer*/
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 20px;;
+}
+/*end of footer*/
