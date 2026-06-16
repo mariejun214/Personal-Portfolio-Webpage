@@ -50,6 +50,30 @@ ul {
     justify-content: flex-end;
     row-gap: 8px;
 }
+
+.menu-toggle,
+.menu-icon {
+    display: none;
+}
+
+.menu-icon {
+    cursor: pointer;
+    width: 36px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-icon span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #f0f0f0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
 /*end of navbar*/
 
 /*start of welcome section*/
@@ -64,6 +88,10 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #303841;
     color: #f0f0f0;
+}
+
+img {
+    max-width: 100%;
 }
 
 section {
@@ -232,12 +260,47 @@ section {
 @media (max-width: 760px) {
     #navbar {
         padding: 8px 1rem;
-        align-items: flex-start;
+        align-items: center;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+        width: 100%;
+        padding: 1rem;
+        background-color: #be3144;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-toggle:checked ~ .nav-menu {
+        display: flex;
+    }
+
+    .menu-toggle:checked + .menu-icon span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle:checked + .menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked + .menu-icon span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 
     .nav-list a {
-        margin-right: 1rem;
-        font-size: 0.9rem;
+        display: block;
+        margin-right: 0;
+        font-size: 1rem;
     }
 
     .about-content {
@@ -257,16 +320,15 @@ section {
 
 @media (max-width: 420px) {
     #navbar {
-        min-height: 86px;
+        min-height: 58px;
     }
 
     section {
-        scroll-margin-top: 86px;
+        scroll-margin-top: 58px;
     }
 
     .nav-list a {
-        font-size: 0.72rem;
-        margin-right: 0.75rem;  
+        font-size: 0.95rem;
     }
    #logo {
     width: 35px;
