@@ -127,7 +127,10 @@ section {
 }
 
 .about-photo {
-    width: min(100%, 360px);
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    max-height: 450px;
     aspect-ratio: 4 / 5;
     object-fit: cover;
     border-radius: 5px;
